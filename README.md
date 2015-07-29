@@ -1,4 +1,4 @@
-#angular-pagination
+#angular-lazyload
 
 
 ### 关于
