@@ -1,0 +1,35 @@
+<div class="ui-page">
+  <ul class="pagination" ng-if="conf.total">
+    <li ng-class = "{disabled :  conf.currentPage == 1}" ng-click="prevPage()">
+    <a href="#" aria-label="Previous">
+      <span aria-hidden="true">
+        &laquo
+      </span>
+    </a>
+    </li>
+    <li ng-repeat="page in pageList track by $index" ng-click="changePage(page)" ng-class="{active : conf.currentPage == page }">
+    <a>{{page}}</a>
+    </li>
+    <li ng-class = "{disabled :  conf.currentPage == page.limit}"  ng-click="nextPage()">
+    <a href="#" aria-label="Previous">
+      <span aria-hidden="true">
+        &raquo
+      </span>
+    </a>
+    </li>
+  </ul>
+  <div class="pageConf">
+    <div ng-if="!conf.isSelectPage">
+      一页<select ng-options="limit for limit in conf.pageLimit" ng-model="conf.itemPageLimit" ng-change="selectPage()"></select>条/
+    </div>
+    <div>
+      共<span>{{page.limit}}</span>页
+    </div>
+    <div ng-if="!conf.isLinkPage">
+      <div class="name">
+        到<input type="text" ng-model="conf.linkPage" ng-change="linkPage()">页
+      </div>
+      <button class="btn btn-success" ng-if="0">确定</button>
+    </div>
+  </div>
+</div>

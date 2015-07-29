@@ -1,0 +1,25 @@
+{
+  "name": "angular-pagination",
+  "version": "1.0.0",
+  "homepage": "https://github.com/febobo/angular-paganation",
+  "authors": [
+    "febobo"
+  ],
+  "description": "基于angular 扩展的可复用的分页指令",
+  "main": "angular-pagination.min.js",
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5"
+  }
+}
