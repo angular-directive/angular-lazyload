@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lazyload</title>
+    <script type="text/javascript" charset="utf-8" src="../bower_components/angular/angular.js">
+    </script>
+    <script type="text/javascript" charset="utf-8" src="lazyload.js">
+    </script>
+    <link rel="stylesheet"  href="../bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet"  href="lazyload.css">
+  </head>
+  <body  onload="" ng-app="demo" ng-controller="demoCtro" class="row text-center">
+    <h1 id="" class="text-center" style="margin: 100px;">
+      {{title}}
+    </h1>
+   <div class="content">
+     <img src="{{item}}" ng-repeat="item in imgs track by $index" />
+   </div>
+  </body>
+</html>
+<script type="text/javascript" charset="utf-8">
+
+  var app = angular.module('demo' , ['lazyload']);
+  app.controller('demoCtro' , function($scope){
+      $scope.title = 'lazyload-directive';
+      $scope.imgs = [];
+
+      var url = 600;
+      for(var i = 0; i< 20 ; i++ ){
+         url ++ ;
+         $scope.imgs.push('http://placekitten.com/'+url+'/300');
+      }
+  })
+</script>

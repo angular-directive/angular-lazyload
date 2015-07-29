@@ -1,0 +1,13 @@
+.content{
+  width : 200px;
+  border : 2px solid #eee;
+  height : 400px;
+  overflow-x : hidden ;
+  overflow-y : scroll;
+  margin : 0 auto ;
+}
+.content img{
+  width : 100%;
+  margin-bottom : 2px;
+  
+}
