@@ -13,8 +13,9 @@
     <h1 id="" class="text-center" style="margin: 100px;">
       {{title}}
     </h1>
+    <button class="btn btn-success" style="margin-bottom: 15px;">查看浏览器network里的请求情况</button>
    <div class="content">
-     <img src="{{item}}" ng-repeat="item in imgs track by $index" />
+     <img src="" ng-repeat="item in imgs track by $index" data-ui-lazyload="{{item}}" watch="watch"/>
    </div>
   </body>
 </html>
@@ -25,6 +26,7 @@
 
       $scope.title = 'lazyload-directive';
 
+      $scope.watch = {};
       // 图片集合
       $scope.imgs = [];
 

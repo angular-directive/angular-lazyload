@@ -1,28 +1,29 @@
 {
-  "name": "angular-pagination",
+  "name": "angular-lazyload",
   "version": "1.0.0",
-  "description": "基于angular扩展的",
-  "main": "pagination",
+  "description": "基于angular扩展的图片懒加载指令",
+  "main": "dist/angular-lazyload.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/febobo/angular-paganation.git"
+    "url" : "https://github.com/angular-directive/angular-lazyload"
   },
   "keywords": [
     "angular",
-    "pagination",
+    "lazyload",
     "directive"
   ],
   "author": "febobo",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/febobo/angular-paganation/issues"
+    "url" : "https://github.com/angular-directive/angular-lazyload"
   },
   "devDependencies": {
     "gulp": "~3.9.0",
     "gulp-connect": "~2.2.0",
-    "browser-sync": "~2.8.1"
+    "browser-sync": "~2.8.1",
+    "gulp-build": "~0.5.3"
   }
 }
